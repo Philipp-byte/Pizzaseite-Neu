@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de"> <!-- Start des HTML-Dokuments, Sprache: Deutsch -->
+<head>
+    <!-- Metadaten des Dokuments -->
+    <meta charset="UTF-8"> <!-- Zeichencodierung (Umlaute etc. werden korrekt dargestellt) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsives Design für mobile Geräte -->
+    <meta name="description" content="Pizzeria PI Co - Italienische Spezialitäten aus Heilbronn"> <!-- Beschreibung der Seite für Suchmaschinen -->
+    <title>Pizzeria PI Co</title> <!-- Titel der Webseite (wird im Browser-Tab angezeigt) -->
+    <link rel="stylesheet" href="css/style.css"> <!-- Verknüpfung mit der externen CSS-Datei -->
+    <script defer src="js/main.js"></script> <!-- Verknüpfung mit der JavaScript-Datei, wird erst nach dem Laden des HTML ausgeführt -->
+</head>
+<body data-theme="light"> <!-- Körper der Webseite mit Start-Theme "light" -->
+    <div class="container"> <!-- Haupt-Container für den Inhalt -->
+        <div class="grid"> <!-- Raster-Layout zur Strukturierung der Seite -->
+
+            <!-- Kopfbereich der Webseite -->
+            <header class="header">
+                <div class="logo">
+                    <img src="assets/img/pico_logo_white.svg" alt="PI Co Logo"> <!-- Logo der Pizzeria -->
+                </div>
+
+                <!-- Navigationsleiste (für Desktop) -->
+                <nav class="main-nav">
+                    <ul class="desktop-menu"> <!-- Hauptmenü (sichtbar auf großen Bildschirmen) -->
+                        <li><a href="#" class="active">Startseite</a></li>
+                        <li><a href="#about">Über uns</a></li>
+                        <li><a href="#specialties">Spezialitäten</a></li>
+                        <li><a href="#opening-hours">Öffnungszeiten</a></li>
+                    </ul>
+
+                    <!-- Button zum Wechseln zwischen Hell-/Dunkelmodus -->
+                    <button class="theme-toggle" id="themeToggle" aria-label="Farbmodus wechseln">
+                        <span class="light-icon">☀️</span> <!-- Symbol für helles Design -->
+                        <span class="dark-icon">🌙</span> <!-- Symbol für dunkles Design -->
+                    </button>
+
+                    <!-- Button für mobiles Menü (Hamburger-Menü) -->
+                    <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
+                        <span class="hamburger-text">☰ Menü</span>
+                    </button>
+                </nav>
+            </header>
+
+            <!-- Overlay-Menü für mobile Ansicht -->
+            <div class="overlay-menu" id="overlayMenu">
+                <div class="overlay-header">
+                    <button id="closeOverlay" aria-label="Menü schließen">✖ Schließen</button>
+                </div>
+                <nav class="overlay-nav"> <!-- Navigation im Overlay-Menü -->
+                    <ul>
+                        <li><a href="#" class="active">Startseite</a></li>
+                        <li><a href="#about">Über uns</a></li>
+                        <li><a href="#specialties">Spezialitäten</a></li>
+                        <li><a href="#opening-hours">Öffnungszeiten</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Hero-Bereich mit Video-Hintergrund -->
+            <section class="hero">
+                <div class="video-container">
+                    <div class="video-overlay">Alles PI Co Bello</div> <!-- Text über dem Video -->
+                    <video autoplay loop muted playsinline> <!-- Video läuft automatisch, ohne Ton -->
+                        <source src="assets/video/pico_werbeclip.mp4" type="video/mp4">
+                        Dein Browser unterstützt kein Video-Tag. <!-- Fallback-Text -->
+                    </video>
+                </div>
+            </section>
+
+            <!-- Abschnitt "Über uns" -->
+            <section class="content-section light-section" id="about">
+                <div class="text-content">
+                    <h2>Pizza ist Leben.</h2>
+                    <p>Seit unser Großvater vor 53 Jahren die Pizzeria in Heilbronn eröffnet hat, backen und kochen wir bereits in der 3. Generation mit Leidenschaft leckere italienische Spezialitäten aus unserer sizilianischen Heimat.</p>
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/piceOfPizza.jpg" alt="Ein Stück Pizza" loading="lazy"> <!-- Bild wird erst geladen, wenn nötig -->
+                </div>
+            </section>
+
+            <!-- Abschnitt "Spezialitäten" -->
+            <section class="content-section dark-section" id="specialties">
+                <div class="image-container">
+                    <img src="assets/img/picoSpecials.png" alt="Unsere Spezialitäten" loading="lazy">
+                </div>
+                <div class="text-content">
+                    <h2>Unsere<br>Spezialitäten</h2>
+                    <p>Alle unsere Teige und Nudeln stellen unsere Köche in aufwendiger Handarbeit her, da Frische bei uns an aller erster Stelle steht.</p>
+                    <p><span class="text-inline">Das schmeckt man!</span> <a href="#" class="special-link">Überzeugen Sie sich selbst.</a></p>
+                </div>
+            </section>
+
+            <!-- Abschnitt "Öffnungszeiten" -->
+            <section class="content-section light-section" id="opening-hours">
+                <div class="text-content">
+                    <h2>Öffnungszeiten</h2>
+                    <p>Wir sind täglich von 11:30 Uhr bis 23:00 Uhr für Sie da. Ihre Bestellung oder Reservierung nehmen wir gerne telefonisch, sowie auch elektronisch entgegen.</p>
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/happyPeople.jpg" alt="Glückliche Menschen" loading="lazy">
+                </div>
+            </section>
+
+            <!-- Fußbereich der Webseite -->
+            <footer class="footer">
+                <div class="footer-top">
+                    <p class="bold-text">Pizzeria PI Co</p>
+                    <span class="separator">|</span>
+                    <p>Oststraße 12</p>
+                    <span class="separator">|</span>
+                    <p>74072 Heilbronn</p>
+                </div>
+                <div class="footer-bottom">
+                    <a href="tel:+4971315675" class="hover-effect">07131 / 56755</a> <!-- Telefonnummer (anklickbar) -->
+                    <a href="mailto:info@pico.de" class="hover-effect">info@pico.de</a> <!-- E-Mail-Adresse (anklickbar) -->
+                    <a href="#" aria-label="Facebook">
+                        <img src="assets/img/facebook_icon.png" alt="Facebook" class="footer-icon"> <!-- Facebook-Symbol -->
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <img src="assets/img/instagram_icon.png" alt="Instagram" class="footer-icon"> <!-- Instagram-Symbol -->
+                    </a>
+                    <a href="#" class="hover-effect">Impressum</a> <!-- Link zu Impressum -->
+                    <a href="#" class="hover-effect">Datenschutz</a> <!-- Link zu Datenschutzerklärung -->
+                </div>
+                <div class="copyright">
+                    <p>Erstellt von Philipp Riegert</p>
+                </div>
+            </footer>
+
+        </div> <!-- Ende grid -->
+    </div> <!-- Ende container -->
+</body>
+</html>
